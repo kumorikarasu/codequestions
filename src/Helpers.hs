@@ -1,6 +1,7 @@
 module Helpers where
 
 import Data.List
+import Data.Function (on)
 
 
 {-Number of Steps to Reduce a Number to Zero -}
@@ -12,6 +13,11 @@ calcSteps num = calc num 0
       | n == 0 = a
       | n `rem` 2 == 0 = calc (n `div` 2) (a+1)
       | n `rem` 2 == 1 = calc (n-1) (a+1)
+
+{- Sort string by array -}
+sortByArray :: String -> [Int] -> String
+sortByArray str xs =
+  map fst $ sortBy (compare `on` snd) (zip str xs) 
 
 
 -- Helper function

@@ -13,11 +13,12 @@ main = do
      runTweets 
      putStrLn "Running Two Sums Question"
      runTwoSum
-     putStrLn ""
-     putStrLn "Running Parking Question"
+     putStrLn "\nRunning Parking Question"
      runParking
-     putStrLn "Running Steps Question"
+     putStrLn "\nRunning Steps Question"
      putStrLn (show $ calcSteps 123)
+     putStrLn "\nRunning Sort String By Array"
+     putStrLn $ sortByArray "codeleet" [4,5,6,7,0,2,1,3]
 
 
 entryPoint = main
