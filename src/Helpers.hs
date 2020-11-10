@@ -3,6 +3,17 @@ module Helpers where
 import Data.List
 
 
+{-Number of Steps to Reduce a Number to Zero -}
+calcSteps :: Int -> Int
+calcSteps num = calc num 0
+  where 
+    calc :: Int -> Int -> Int
+    calc n a
+      | n == 0 = a
+      | n `rem` 2 == 0 = calc (n `div` 2) (a+1)
+      | n `rem` 2 == 1 = calc (n-1) (a+1)
+
+
 -- Helper function
 count :: String -> ([String] -> Int)
 count x = length . filter (\z -> z==x)
@@ -13,3 +24,5 @@ beginsWith l _ = False
 
 showTuple :: (String, Int) -> String
 showTuple (t, i) = "" ++ t ++ ":" ++ show i
+
+

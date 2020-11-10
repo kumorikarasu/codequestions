@@ -5,6 +5,7 @@ module Lib
 import Tweets (runTweets)
 import TwoSum (runTwoSum)
 import Parking (runParking)
+import Helpers
 
 main :: IO ()
 main = do
@@ -15,7 +16,8 @@ main = do
      putStrLn ""
      putStrLn "Running Parking Question"
      runParking
-
+     putStrLn "Running Steps Question"
+     putStrLn (show $ calcSteps 123)
 
 
 entryPoint = main
