@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: ee3e561ca91b3c99bbb350a0ff4861ff2520a407f33b7e2db1560067242ef624
+-- hash: 7073ac338dddd4a782b6ac9e5429ad1d2f78db3078f3cdfcf46286bb47cb8e1d
 
 name:           code
 version:        0.1.0.0
@@ -27,6 +27,7 @@ source-repository head
 
 library
   exposed-modules:
+      GroupPeople
       Helpers
       Lib
       Parking

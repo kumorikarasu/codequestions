@@ -17,7 +17,7 @@ calcSteps num = calc num 0
 {- Sort string by array -}
 sortByArray :: String -> [Int] -> String
 sortByArray str xs =
-  map fst $ sortBy (compare `on` snd) (zip str xs) 
+  map fst $ sortBy (compare `on` snd) $ zip str xs
 
 
 -- Helper function
@@ -28,7 +28,8 @@ beginsWith :: Char -> [Char] -> Bool
 beginsWith l (c:_) = c == l
 beginsWith l _ = False
 
-showTuple :: (String, Int) -> String
-showTuple (t, i) = "" ++ t ++ ":" ++ show i
+showTuple :: Show a => Show b => (a, b) -> String
+showTuple (t, i) = "" ++ show t ++ ":" ++ show i
 
-
+pairToList :: (a, a) -> [a]
+pairToList (x,y) = [x,y]
